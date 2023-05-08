@@ -1,0 +1,26 @@
+type Query {
+  cart(id: ID!): Cart!
+}
+
+type Cart {
+  id: ID!
+  totalItems: Int!
+  isEmpty: Boolean!
+  subTotal: Money!
+}
+
+type Money {
+  formatted: String!
+  amount: Int!
+}
+
+query GetCartById($id: ID!) {
+  cart(id: $id) {
+    id
+    totalItems
+    subTotal {
+      formatted
+      amount
+    }
+  }
+}

@@ -1,6 +1,6 @@
 overwrite: true
 schema: https://api.cartql.com
-documents: "**/*.graphql
+documents: "**/*.graphql"
 generates:
   types.ts:
     plugins:
