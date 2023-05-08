@@ -1,0 +1,9 @@
+overwrite: true
+schema: https://api.cartql.com
+documents: "**/*.graphql
+generates:
+  types.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typed-document-node
